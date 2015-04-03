@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>3D Scene with face detection</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .rect {
+        border: 2px solid green;
+        left: -1000px;
+        position: absolute;
+        top: -1000px;
+      }
+
+      #canvas,
+      #video {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-frame">
+      <div class="demo-container">
+        <video id="video" width="160" height="120" preload autoplay loop muted></video>
+        <canvas id="canvas" width="160" height="120"></canvas>
+      </div>
+    </div>
+
+    <script src="tracking-min.js"></script>
+    <script src="face-min.js"></script>
+
+    <script src="clmtrackr.js"></script>
+    <script src="model_pca_20_svm.js"></script>
+
+    <script src="three.min.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
